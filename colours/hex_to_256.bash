@@ -10,7 +10,7 @@
 # https://unix.stackexchange.com/questions/269077/tput-setaf-color-table-how-to-determine-color-codes/269085#269085
 #
 
-fromhex(){
+fromhex() {
     hex=${1#"#"}
     r=$(printf '0x%0.2s' "$hex")
     g=$(printf '0x%0.2s' ${hex#??})
