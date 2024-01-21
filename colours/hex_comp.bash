@@ -2,7 +2,7 @@
 
 # hex_comp.bash
 #
-# Display a hexadecimal colour representation next to the supplied colour in 265
+# Display a hexadecimal colour representation next to the supplied colour in 256
 # space. Assuming your terminal is able to display 24 bit colour.
 #
 # Licensed under CC BY-SA 3.0 (https://creativecommons.org/licenses/by-sa/3.0/)
@@ -15,8 +15,8 @@ hexcomp() {
     g=$(printf '0x%0.2s' ${hex#??})
     b=$(printf '0x%0.2s' ${hex#????})
 
-    printf 'original \e[48;2;%d;%d;%dm      \e[0m %s\n' "$r" "$g" "$b" "$1"
-    printf ' compare \e[48;5;%sm      \e[0m %s\n' "$2" "$2"
+    printf 'original \e[38;2;%d;%d;%dm██████\e[0m %s\n' "$r" "$g" "$b" "$1"
+    printf ' compare \e[38;5;%sm██████\e[0m %s\n' "$2" "$2"
 }
 
 hexcomp "$1" "$2"

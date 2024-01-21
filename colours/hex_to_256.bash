@@ -20,8 +20,8 @@ fromhex() {
                               (g<75?0:(g-35)/40)*6   +
                               (b<75?0:(b-35)/40)     + 16 ))")
 
-    printf 'original \e[48;2;%d;%d;%dm      \e[0m %s\n' "$r" "$g" "$b" "$1"
-    printf ' closest \e[48;5;%sm      \e[0m %s\n' "$code" "$code"
+    printf 'original \e[38;2;%d;%d;%dm██████\e[0m %s\n' "$r" "$g" "$b" "$1"
+    printf ' closest \e[38;5;%sm██████\e[0m %s\n' "$code" "$code"
 }
 
 fromhex "$1"
