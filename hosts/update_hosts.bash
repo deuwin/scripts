@@ -1,9 +1,14 @@
 #!/bin/bash
 
+# update_hosts
+# A script to update your system's hosts file from the curated list at
+# https://github.com/StevenBlack/hosts
 #
 # TODO:
-#   - add options for quiet operation, specify logfile location
-#   - add option to restore default hosts file or backup?
+#   possibly add options for:
+#   - quiet operation
+#   - specifying logfile location
+#   - restoring default hosts file
 #
 
 readonly HOSTS_FILE="/etc/hosts"
