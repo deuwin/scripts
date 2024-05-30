@@ -14,12 +14,15 @@
 readonly HOSTS_FILE="/etc/hosts"
 
 log() {
-    echo "$1"
+    local date=$(date "+%F %T")
+    echo "[$date] $1" >> "/tmp/update_hosts"
 }
 
 # strict mode
 set -euo pipefail
 IFS=$'\n\t'
+
+log "Starting..."
 
 # grab latest release info
 set +e
