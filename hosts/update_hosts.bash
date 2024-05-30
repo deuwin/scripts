@@ -84,7 +84,7 @@ cp "$HOSTS_FILE" "$temp_backup"
 # move temporary file to hosts
 sudo mv "$temp_update" $HOSTS_FILE
 working_dir="$(dirname "${BASH_SOURCE[0]}")"
-mv "$temp_backup" "$working_dir/hosts.backup"
+mv --force "$temp_backup" "$working_dir/hosts.backup"
 
 # restart network
 log "Restarting network..."
