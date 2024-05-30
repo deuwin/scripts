@@ -88,6 +88,6 @@ mv "$temp_backup" "$working_dir/hosts.backup"
 
 # restart network
 log "Restarting network..."
-sudo service network-manager restart
+sudo service NetworkManager restart
 
 log "Update complete!"
